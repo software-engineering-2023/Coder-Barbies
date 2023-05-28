@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Coder Barbies | Dashboard</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.2 -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+    <!-- FontAwesome 4.3.0 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons 2.0.0 -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />    
+    <!-- Theme style -->
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <!-- iCheck -->
+    <link href="plugins/iCheck/flat/blue.css" rel="stylesheet" type="text/css" />
+    <!-- Morris chart -->
+    <link href="plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+    <!-- jvectormap -->
+    <link href="plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <!-- Date Picker -->
+    <link href="plugins/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker -->
+    <link href="plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="skin-blue">
+    <div class="wrapper">
+      
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo"><b>Coder</b> Barbies</a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">1</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 1 message</li>
+                  <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                      <li><!-- start message -->
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="dist/img/user4-128x128.jpg" alt="user image" class="online"/>
+                          </div>
+                          <h4>
+                            Support Team
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <p>We cannot help sorry</p>
+                        </a>
+                      </li><!-- end message -->
+                    
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">See All Messages</a></li>
+                </ul>
+              </li>
+              <!-- Notifications: style can be found in dropdown.less -->
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">3</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 3 notifications</li>
+                  <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> We are shutting down the bank
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> We are under maintanance for 2 days
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-red"></i> We have a CEO position available 
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
+                            <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
+                  <span class="hidden-xs">Yousef Shazly</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    <p>
+                      Yousef Shazly - Not Helpful
+                      <small>Member since Nov. 2012</small>
+                    </p>
+                  </li>
+                 
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+              <p>Yousef Shazly</p>
+
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search..."/>
+              <span class="input-group-btn">
+                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="active treeview">
+                <li class="active"><a href="bankerhomepage.html"><i class="fa fa-circle-o"></i> Home Page</a></li>
+            </li>
+              <li>
+              <a href="viewclients.html">
+                <i class="fa fa-th"></i> <span>View All Clients</span>
+              </a>
+            </li>
+              <li>
+              <a href="viewclientccrequests.html">
+                <i class="fa fa-th"></i> <span>Credit Card Requests</span>
+              </a>
+            </li>
+              <li>
+              <a href="viewclientloanrequests.html">
+                <i class="fa fa-th"></i> <span>Loan Requests</span>
+              </a>
+            </li>
+              <li>
+              <a href="sendbankannouncements.html">
+                <i class="fa fa-th"></i> <span>Send Bank Announcements</span>
+              </a>
+            </li>
+              <li>
+              <a href="reportissuesasbanker.html">
+                <i class="fa fa-th"></i> <span>Report Technical Issues</span>
+              </a>
+            </li>
+            
+          </ul>
+          
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Right side column. Contains the navbar and content of the page -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+       
+
+        <!-- Main content  EDIT HEREEEEEEEEEEEEEEEEEEEEE-->         
+        <div class="row">
+          <div class="col-md-12">
+            <div class= "box box-success">
+               <div class= "box-body">
+                 <div class="table-responsive">
+                    <table class="table no-margin">
+                      <thead>
+                        <tr>
+                          <th>Client ID</th>
+                          <th>Full Name</th>
+                          <th>Credit Score</th>
+                          <th>View Credit Cards</th>
+                          <th>Pending Requests</th>
+                          <th>Date Joined</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="dist/img/user1-128x128.jpg" alt="User Image"/> <br><br>#123</td>
+                          <td>Talla Hossam Ammar</td>
+                          <td>5,000,709</td>
+                          <td><a href="freezecc.html">ViewCards</a></td>
+                          <td> Yes</td>
+                          <td>July 1st, 2019</td>
+                        </tr>
+                        <tr>
+                          <td><img src="dist/img/user8-128x128.jpg" alt="User Image"/><br><br>#56</td>
+                          <td>Arwa Abouelella</td>
+                          <td>5,000</td>
+                          <td><a href="freezecc.html">ViewCards</a></td>
+                          <td> No</td>
+                          <td>July 29th, 2002</td>
+                        </tr>
+
+                        <tr>
+                          <td><img src="dist/img/user7-128x128.jpg" alt="User Image"/> <br><br>#45</a></td>
+                          <td>Reham AbdelNaby</td>
+                          <td>890</td>
+                          <td><a href="freezecc.html">ViewCards</a></td>
+                          <td> Yes</td>
+                          <td>January 29th, </td>
+                        </tr>
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>
+
+                   
+               </div>
+            </div>           
+         
+        
+                  
+        </section><!-- /.content -->
+
+
+
+     </div><!-- /.content-wrapper -->
+    
+    </div><!-- ./wrapper -->
+    </div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 2.0
+        </div>
+        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+    </footer>
+    <!-- jQuery 2.1.3 -->
+    <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+    <!-- jQuery UI 1.11.2 -->
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>    
+    <!-- Morris.js charts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="plugins/morris/morris.min.js" type="text/javascript"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+    <!-- jvectormap -->
+    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
+    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/knob/jquery.knob.js" type="text/javascript"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+    <!-- datepicker -->
+    <script src="plugins/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+    <!-- iCheck -->
+    <script src="plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+    <!-- Slimscroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <!-- FastClick -->
+    <script src='plugins/fastclick/fastclick.min.js'></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>
+
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js" type="text/javascript"></script>
+
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js" type="text/javascript"></script>
+  </body>
+</html>
