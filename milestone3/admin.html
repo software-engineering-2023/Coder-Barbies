@@ -191,21 +191,46 @@
                 <div class="box-body">
                   <form action="#" method="post">
                     <div class="form-group">
-                      <input type="email" class="form-control" name="emailto" placeholder="Email to:"/>
+                      <input id="rec" type="email" class="form-control" name="emailto" placeholder="Email to:"/>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject"/>
+                      <input id="sub" type="text" class="form-control" name="subject" placeholder="Subject"/>
                     </div>
                     <div>
-                      <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                      <textarea id="des" class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                     </div>
                   </form>
                 </div>
                 <div class="box-footer clearfix">
-                  <button class="pull-right btn btn-default" id="sendEmail">Send <i class="fa fa-arrow-circle-right"></i></button>
+                  <button class="pull-right btn btn-default" id="sendEmail" onclick="sendEmail()">Send <i class="fa fa-arrow-circle-right"></i></button>
                 </div>
               </div>
+              <script>
+                function sendEmail()
+                {
+                  var textBox1 = document.getElementById('sub');
+                  var textBox2 = document.getElementById('des');
+                  var textBox3 = document.getElementById('rec');
 
+                  if (textBox1.value.trim() === '') {
+                         alert('Please enter a subject!');
+        }
+                     else if (textBox3.value.trim() === '') {
+                         alert('Please enter a recepient!');
+                     }
+                     else if (textBox2.value.trim() === '') {
+                         alert('Please enter a body!');
+                     }
+                     else
+                      {
+                        alert('your mail has been sent');
+                        textBox1.value='';
+                        textBox2.value='';
+                        textBox3.value='';
+                      }
+
+                }
+              </script>
             </section><!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable">
