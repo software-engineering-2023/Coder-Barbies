@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AdminLTE 2 | Registration Page</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.2 -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="../../dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- iCheck -->
+    <link href="../../plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="register-page">
+    <div class="register-box">
+      <div class="register-logo">
+        <a> </a><b>Register </b></a>
+      </div>
+
+      <div class="register-box-body">
+        <p class="login-box-msg">Register a new account</p>
+        
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="Full name" id="name"/>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+          </div>
+         
+        <!-- select -->
+        <div class="form-group">
+          <label>Do you have a bank account?</label>
+          <select id="select-option" class="form-control">
+          <option>Already have a bank account</option>
+          <option>Don't have a bank account</option>
+          </select>
+      </div>
+      
+      <!-- Select multiple-->
+      <div class="form-group" id="client-group">
+          <label for="clients">Bank account number</label>
+          <br>
+          <input type="text" name="client[]"  placeholder ="bank account number">
+         
+      </div>
+      
+
+      
+      <script>
+          var selectOption = document.getElementById("select-option");
+          var clientGroup = document.getElementById("client-group");
+      
+          selectOption.addEventListener("change", function() {
+          if (selectOption.value === "Already have a bank account") {
+              clientGroup.style.display = "block";
+          } else {
+              clientGroup.style.display = "none";
+          }
+      
+
+          });
+      </script>
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="username" id="user"/>
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Password" id="pass1"/>
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Retype password" id="pass2"/>
+            <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <select id="select-option2" class="form-control">
+            <option>Male</option>
+            <option>Female</option>
+            </select>
+        </div>
+          <div class="row">
+            <div class="col-xs-8">    
+                                  
+            </div><!-- /.col -->
+            <div class="col-xs-4">
+              <button onclick="checkform()" class="btn btn-primary btn-block btn-flat">Register</button>
+            </div><!-- /.col -->
+          </div>
+           
+
+        
+
+        <a href="login.html" class="text-center">I already have an account</a>
+      </div><!-- /.form-box -->
+    </div><!-- /.register-box -->
+
+    <!-- jQuery 2.1.3 -->
+    <script src="../../plugins/jQuery/jQuery-2.1.3.min.js"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- iCheck -->
+    <script src="../../plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+    
+
+
+    <script>
+      function checkform()
+      {
+      var textBox1 = document.getElementById('name');
+       var textBox2 = document.getElementById('user');
+       var textBox3 = document.getElementById('pass1');
+       var textBox4 = document.getElementById('pass2');
+       if (textBox1.value.trim() === '') {
+                         alert('Please enter your name');
+        }
+                     else if (textBox2.value.trim() === '') {
+                         alert('Please enter a username');
+                     }
+                     else if (textBox3.value.trim() === '') {
+                         alert('Please enter a password!');
+                     }
+                     else if (textBox4.value.trim() === '') {
+                         alert('Please repeat your password');
+                     }
+                    else if (textBox4.value.trim()!== textBox3.value.trim()) {
+                      alert('password does not match');
+                      }
+                      
+                      else
+                      {
+                       alert('Account creation successful,please log in');
+                        document.location.href = "login.html"; 
+                       // where we need to add the correct reference to the button
+                      }
+                      
+      }
+      
+    </script> 
+    <script>
+      $(function () {
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      });
+    </script>
+  </body>
+</html>
