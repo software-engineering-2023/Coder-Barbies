@@ -245,73 +245,71 @@
               </div>
               <div class="form-group">
                 <label2 for="exampleInputPassword1" >National ID</label2>
-                <input type="password"  class="form-control" id='second' placeholder="Enter your national ID">
+                <input type="number"  class="form-control" id='second' placeholder="Enter your national ID">
               </div>
               <div class="form-group">
-                <label3 for="exampleInputPassword1" >Account Type</label3>
-                <input type="text"    class="form-control" id='last' placeholder="Credit/Debit">
-              </div>
-              <p id="accept-favor"><a title="Notif" 
-                href="?wp_accept_favor=<?php comment_ID(); ?>" 
-                onclick="return confirm('Your Account has been created');"
-                ><button type="submit" class="btn btn-primary">Submit</button>
-              </div></a></p>
+                <i class="fa fa-fw fa-dollar"></i>
+               <label> Account Type</label>
+               <select id="select-option" class="form-control">
+                <option>Current Account</option>
+                <option>Savings Account</option>
+               </select>
+           </div>
+           <script>
+            function okay() {
+              
+                // Show the modal dialog
+                event.preventDefault();
+                var textBox1 = document.getElementById('first');
+                var textBox2 = document.getElementById('second');
+                   if (textBox1.value.trim() === '') {
+                     alert('Please enter your full name!');
+                 }
+                 else if (textBox2.value.trim() === '') {
+                     alert('Please enter your ID!');
+                 }
+                
+                 else{
+                     textBox1.value = '';
+                    textBox2.value = '';
+                 $('#my-modal').modal('show');  
+                 }
+            
+            }
+          </script>
+          <div id="my-modal" class="modal fade" tabindex="-1" role="dialog">
+                     <div class="modal-dialog" role="document">
+                       <div class="modal-dialog">
+                         <div class="modal-content">
+                           <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                             <h4 class="modal-title">Account Application </h4>
+                           </div>
+                           <div class="modal-body">
+                             <p>Your Account has been created!</p>
+                           </div>
+                           <div class="modal-footer">
+                             <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                             <button type="button" class="btn btn-outline">Save changes</button>
+                           </div>
+                         </div><!-- /.modal-content -->
+                       </div><!-- /.modal-dialog -->
+                     </div><!-- /.modal -->
+                     </div>
+              <button type="submit" class="btn btn-primary" onclick="okay()">Submit</button>
+
             </div><!-- /.box-body -->
             
              
             </div>
-            <script>
-              $(function() {
-                $('#open-modal-btn').click(function() {
-                  // Show the modal dialog
-                  var textBox1 = document.getElementById('first');
-                  var textBox2 = document.getElementById('second');
-                  var textBox3 = document.getElementById('last');
-                     if (textBox1.value.trim() === '') {
-                       alert('Please enter your full name!');
-                   }
-                   else if (textBox2.value.trim() === '') {
-                       alert('Please enter your ID!');
-                   }
-                   else if (textBox3.value.trim() === '') {
-                       alert('Please enter debit or credit!');
-                   }
-                   else{
-                       textBox1.value = '';
-                      textBox2.value = '';
-                      textBox3.value = '';
-                   $('#my-modal').modal('show');  
-                   }
-                });
-              });
-            </script>
-            <div id="my-modal" class="modal fade" tabindex="-1" role="dialog">
-                       <div class="modal-dialog" role="document">
-                         <div class="modal-dialog">
-                           <div class="modal-content">
-                             <div class="modal-header">
-                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                               <h4 class="modal-title">Account Application </h4>
-                             </div>
-                             <div class="modal-body">
-                               <p>Your Account has been created!</p>
-                             </div>
-                             <div class="modal-footer">
-                               <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-                               <button type="button" class="btn btn-outline">Save changes</button>
-                             </div>
-                           </div><!-- /.modal-content -->
-                         </div><!-- /.modal-dialog -->
-                       </div><!-- /.modal -->
-                       </div>
+
            
 
           
-            <div class="box-footer">
             
           
           </form>
-        </div><!-- /.box -->
+        
                 
        
                  
