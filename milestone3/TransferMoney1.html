@@ -225,98 +225,109 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-             Card Information
+             Transfer 
             <br></br>
           </h1>
         </section>
 
         <!-- Main content  EDIT HEREEEEEEEEEEEEEEEEEEEEE-->        
-        <div class="col-md-4">
-            <!-- Info box -->
-            <div class="box box-solid bg-green">
-              <div class="box-header">
-                <h3 class="box-title">Credit Card 1354</h3>
-              </div>
-              <div class="box-body">
-                
-                <p>
-                 <strong>Cardholder Name:</strong> Arwa Fakhry
-                </p>
-                <p>
-                  <strong>Money Available:</strong> 76479
-                </p>
-                 <p>
-                  <strong>Expiration Date:</strong> 10/11/2026
-                </p>
-                 <p>
-                  <strong>Currancy:</strong> US dollars
-                 </p>
-                
-                
-
-               
-              </div><!-- /.box-body -->
-              
-            </div><!-- /.box -->
-            
-            <div class="box box-primary" style="margin-left:500px;margin-right:899px;margin-bottom:600px  ;width:567px">
-              <div class="box-header">
-                <h3 class="box-title">Transfer Money</h3>
-              </div><!-- /.box-header -->
-              <!-- radio -->
-              <div class="form-group">
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Internal Transfer
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    Domestic Transfer
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                    International Transfer
-                  </label>
-                </div>
-              <!-- form start -->
-              <form role="form">
+              <div class="box box-primary">
+                <div class="box-header">
+                  <h3 class="box-title"> Transfer Money</h3>
+                </div><!-- /.box-header -->
+                <!-- radio -->
                 <div class="box-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Recepient Name</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter recepient's full name">
+
+                <div class="form-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      Internal Transfer
+                    </label>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Account Number</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter recepient's account number">
+                  <div class="radio">
+                    <label> 
+                        
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                      Domestic Transfer
+                    </label>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Bank Name</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter recepient's bank name">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      International Transfer
+                    </label>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Country</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter recepient's country">
+                <!-- form start -->
+                <form role="form">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Recepient Name</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter recepient's full name">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Account Number</label>
+                      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter recepient's account number">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Bank Name</label>
+                      <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Enter recepient's bank name">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Country</label>
+                      
+                      <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Enter recepient's country">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Amount</label>
+                      <input type="number" class="form-control" id="exampleInputPassword4" placeholder="Enter Amount to be transfered">
+                    </div>
+                    
+                  </div><!-- /.box-body -->
+                  <div class="box-footer">
+                    
+                    <script>
+                      function transfer()
+                           {
+                               // Show the modal dialog
+         
+                               var textBox1 = document.getElementById('exampleInputEmail1');
+                               var textBox2 = document.getElementById('exampleInputPassword1');
+                               var textBox3 = document.getElementById('exampleInputPassword2');
+                               var textBox4 = document.getElementById('exampleInputPassword3');
+                               var textBox5 = document.getElementById('exampleInputPassword4');
+       
+                               if (textBox1.value.trim() === '') {
+                                    alert('Please enter a recepient');
+                                }
+                                else if (textBox2.value.trim() === '') {
+                                    alert('Please enter an account number');
+                                }
+                                else if (textBox3.value.trim() === '') {
+                                    alert('Please enter a bank name');
+                                }
+                                else if (textBox4.value.trim() === '') {
+                                    alert('Please enter a country');
+                                }
+                                else if (textBox5.value.trim() === '') {
+                                    alert('Please enter an amount');
+                                }
+                                else{
+                                   alert('Transaction was successful!!');
+                                   textBox1.value = '';
+                                   textBox2.value = '';
+                                   textBox3.value=  '';
+                                   textBox4.value=  '';
+                                   textBox5.value=  '';
+                                }
+                               
+                               }
+                   </script>
+        
+                      <button class="btn btn-primary" onclick="transfer()" >Transfer</button>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Amount </label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Amount to be transfered">
-                  </div>
-                  
-                </div><!-- /.box-body -->
-                <div class="box-footer">
-                  
-                  <p id="accept-favor"><a title="Notif" 
-                    href="?wp_accept_favor=<?php comment_ID(); ?>" 
-                    onclick="return confirm('Your Account has been closed');"
-                    <button type="submit" class="btn btn-primary">Transfer</button>
-                  </div></a></p>
-                </div>
-          </div><!-- /.col -->
+            </div><!-- /.col -->
+              
+  
 
        
                  
