@@ -286,10 +286,10 @@
                   <div class="box-footer">
                     
                     <script>
-                      function transfer()
+                      function transfers()
                            {
                                // Show the modal dialog
-         
+                               event.preventDefault();
                                var textBox1 = document.getElementById('exampleInputEmail1');
                                var textBox2 = document.getElementById('exampleInputPassword1');
                                var textBox3 = document.getElementById('exampleInputPassword2');
@@ -322,8 +322,8 @@
                                
                                }
                    </script>
-        
-                      <button class="btn btn-primary" onclick="transfer()" >Transfer</button>
+                          <button class=" btn btn-primary" id="sendEmail" onclick="transfers()" >Transfer</button>
+
                   </div>
             </div><!-- /.col -->
               

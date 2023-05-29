@@ -251,7 +251,11 @@
                 <label3 for="exampleInputPassword1" >Account Type</label3>
                 <input type="text"    class="form-control" id='last' placeholder="Credit/Debit">
               </div>
-            
+              <p id="accept-favor"><a title="Notif" 
+                href="?wp_accept_favor=<?php comment_ID(); ?>" 
+                onclick="return confirm('Your Account has been created');"
+                ><button type="submit" class="btn btn-primary">Submit</button>
+              </div></a></p>
             </div><!-- /.box-body -->
             
              
@@ -281,7 +285,6 @@
                 });
               });
             </script>
-            <button id ="open-modal-btn"  class="btn btn-primary">doesn't workkk</button> <!-- if this function eshtaghalet we can delete the other submit button bas mf is not working w i'm sure enaha fel akher ghalta ghabeya 3ashan ana ghabeya <3 -->
             <div id="my-modal" class="modal fade" tabindex="-1" role="dialog">
                        <div class="modal-dialog" role="document">
                          <div class="modal-dialog">
@@ -303,11 +306,7 @@
                        </div>
            
 
-            <p id="accept-favor"><a title="Notif" 
-              href="?wp_accept_favor=<?php comment_ID(); ?>" 
-              onclick="return confirm('Your Account has been created');"
-              ><button type="submit" class="btn btn-primary">Submit</button>
-            </div></a></p>
+          
             <div class="box-footer">
             
           
